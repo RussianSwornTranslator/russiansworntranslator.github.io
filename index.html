@@ -1,0 +1,626 @@
+<! DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Nilan Jayasinghe | Sinhala-Russian Translator">
+  <meta name="author" content="Nilan Jayasinghe">
+  <title>Nilan Jayasinghe | English Russian Sinhala Sworn Translator</title>
+  <meta name="description" content="Expert English - Russian - Sinhala translation services by Nilan Jayasinghe provides accurate, reliable, and professional translation services. ">
+  
+  <!-- GOOGLE ADS TRACKING CODE GOES HERE LATER -->
+
+  <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/75062604e2.js" crossorigin="anonymous"></script>
+  
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic. com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display: wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    : root {
+      --primary:  #1e3a5f;
+      --primary-light: #2d5a8a;
+      --accent: #c9a227;
+      --accent-light: #e8c547;
+      --text-dark: #1a1a2e;
+      --text-light: #4a4a6a;
+      --bg-cream: #faf8f5;
+      --bg-warm: #f5f0e8;
+      --white: #ffffff;
+      --shadow-soft: 0 4px 20px rgba(30, 58, 95, 0.08);
+      --shadow-medium: 0 8px 40px rgba(30, 58, 95, 0.12);
+      --shadow-strong: 0 20px 60px rgba(30, 58, 95, 0.15);
+      --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.7;
+      background: var(--bg-cream);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* Decorative Background */
+    .bg-decoration {
+      position:  fixed;
+      top: 0;
+      left: 0;
+      width:  100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    . bg-decoration:: before {
+      content: '';
+      position: absolute;
+      top:  -50%;
+      right: -20%;
+      width:  80%;
+      height: 100%;
+      background:  radial-gradient(ellipse, rgba(201, 162, 39, 0.05) 0%, transparent 70%);
+      animation: float-bg 20s ease-in-out infinite;
+    }
+
+    . bg-decoration::after {
+      content:  '';
+      position:  absolute;
+      bottom: -30%;
+      left: -10%;
+      width:  60%;
+      height: 80%;
+      background:  radial-gradient(ellipse, rgba(30, 58, 95, 0.03) 0%, transparent 70%);
+      animation: float-bg 25s ease-in-out infinite reverse;
+    }
+
+    @keyframes float-bg {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      50% { transform: translate(30px, 20px) rotate(5deg); }
+    }
+
+    /* Elegant floating shapes */
+    .floating-shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.5;
+      animation:  float-shape 8s ease-in-out infinite;
+    }
+
+    . shape-1 {
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(135deg, rgba(201, 162, 39, 0.08), transparent);
+      top: 10%;
+      right: 5%;
+      animation-delay: 0s;
+    }
+
+    .shape-2 {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(135deg, rgba(30, 58, 95, 0.06), transparent);
+      top: 60%;
+      left:  3%;
+      animation-delay: 2s;
+    }
+
+    .shape-3 {
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(135deg, rgba(201, 162, 39, 0.06), transparent);
+      bottom: 20%;
+      right: 15%;
+      animation-delay: 4s;
+    }
+
+    @keyframes float-shape {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-30px) scale(1.05); }
+    }
+
+    /* Header */
+    header {
+      background:  linear-gradient(180deg, var(--white) 0%, var(--bg-cream) 100%);
+      padding: 3rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+    }
+
+    header::after {
+      content:  '';
+      position:  absolute;
+      bottom: 0;
+      left: 50%;
+      transform:  translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .logo-area {
+      margin-bottom: 1. 5rem;
+    }
+
+    .logo-icon {
+      width:  80px;
+      height: 80px;
+      margin:  0 auto 1rem;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-medium);
+      position: relative;
+    }
+
+    .logo-icon::after {
+      content:  '';
+      position:  absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      opacity: 0.5;
+    }
+
+    .logo-icon svg {
+      width:  40px;
+      height: 40px;
+      fill: var(--white);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 600;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+      margin-bottom:  0.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color:  var(--accent);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    /* WhatsApp Links */
+    .whatsapp-header {
+      display: flex;
+      justify-content: center;
+      gap:  1rem;
+      margin:  2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .whatsapp-link {
+      color: var(--white);
+      text-decoration: none;
+      font-weight:  500;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.9rem 1.8rem;
+      background: linear-gradient(135deg, #25d366, #128C7E);
+      border-radius: 50px;
+      transition:  var(--transition);
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    }
+
+    .whatsapp-link: hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    }
+
+    . whatsapp-link i {
+      font-size: 1.3rem;
+      color: var(--white) !important;
+    }
+
+    /* Language Tags */
+    .languages {
+      display:  flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .language-tag {
+      background:  var(--white);
+      padding: 0.7rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      border: 1px solid rgba(30, 58, 95, 0.1);
+      box-shadow: var(--shadow-soft);
+      transition: var(--transition);
+    }
+
+    .language-tag:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-medium);
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding:  4rem 2rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2. 5rem;
+    }
+
+    /* Cards */
+    .card {
+      background:  var(--white);
+      border-radius: 24px;
+      padding: 2.5rem;
+      border: 1px solid rgba(30, 58, 95, 0.08);
+      box-shadow: var(--shadow-soft);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    . card:: before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    . card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-strong);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color:  var(--primary);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap:  0.8rem;
+    }
+
+    .card h2 . icon {
+      width:  32px;
+      height: 32px;
+      padding: 6px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 10px;
+      fill: var(--white);
+    }
+
+    .card p {
+      color: var(--text-light);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    /* Services List */
+    .services-list {
+      list-style: none;
+    }
+
+    .services-list li {
+      background: linear-gradient(135deg, var(--bg-cream), var(--bg-warm));
+      margin:  0. 7rem 0;
+      padding: 1.1rem 1.5rem;
+      border-radius: 14px;
+      border-left: 4px solid var(--accent);
+      font-weight: 500;
+      color: var(--text-dark);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap:  0.8rem;
+    }
+
+    . services-list li: hover {
+      transform: translateX(8px);
+      background: linear-gradient(135deg, var(--bg-warm), #efe8da);
+      border-left-color:  var(--primary);
+    }
+
+    /* Map */
+    .map-container {
+      width: 100%;
+      height: 320px;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-top: 1.5rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(30, 58, 95, 0.1);
+    }
+
+    /* Contact Section */
+    .contact-full {
+      grid-column: 1 / -1;
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: var(--white);
+      position: relative;
+    }
+
+    .contact-full::before {
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
+    }
+
+    .contact-full h2 {
+      color: var(--white);
+      justify-content: center;
+    }
+
+    .contact-full h2 .icon {
+      background: rgba(255, 255, 255, 0.2);
+      fill: var(--white);
+    }
+
+    .contact-methods {
+      display:  grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .contact-item {
+      background:  rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transition: var(--transition);
+    }
+
+    .contact-item:hover {
+      background: rgba(255, 255, 255, 0.18);
+      transform: translateY(-5px);
+    }
+
+    .contact-item h3 {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.8rem;
+      opacity: 0.9;
+    }
+
+    .contact-link {
+      color:  var(--accent-light);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1. 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: var(--transition);
+    }
+
+    .contact-link:hover {
+      color: var(--white);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--white);
+      text-align: center;
+      padding: 3rem 2rem;
+      border-top: 1px solid rgba(30, 58, 95, 0.1);
+    }
+
+    .footer-links {
+      margin-bottom: 1.5rem;
+    }
+
+    . footer-links a {
+      margin:  0 15px;
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition:  var(--transition);
+      position: relative;
+    }
+
+    .footer-links a:: after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height:  2px;
+      background: var(--accent);
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .footer-links a:hover::after {
+      width:  100%;
+    }
+
+    footer p {
+      color:  var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 3rem 1.5rem;
+      }
+    }
+
+    @media (max-width:  600px) {
+      header {
+        padding: 2rem 1rem 3rem;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .subtitle {
+        font-size: 0.95rem;
+        letter-spacing: 2px;
+      }
+
+      .whatsapp-header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .whatsapp-link {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+      }
+
+      .card {
+        padding: 2rem 1.5rem;
+      }
+
+      .contact-methods {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-decoration">
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+  </div>
+
+  <header>
+    <div class="header-content">
+      <div class="logo-area">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12.87 15.07l-2.54-2.51. 03-. 03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9. 75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c. 73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19. 12 17h-3.24z"/>
+          </svg>
+        </div>
+        <h1>Nilan Jayasinghe</h1>
+        <p class="subtitle">Sworn Translator</p>
+      </div>
+      
+      <div class="whatsapp-header">
+        <a href="https://api.whatsapp. com/send/? phone=79811322270" target="_blank" class="whatsapp-link">
+          <i class='bx bxl-whatsapp'></i> WhatsApp (Russia): +7 981 132 2270
+        </a>
+        <a href="https://api.whatsapp. com/send/?phone=94711363736" target="_blank" class="whatsapp-link">
+          <i class='bx bxl-whatsapp'></i> WhatsApp (Sri Lanka): +94 71 136 3736
+        </a>
+      </div>
+      
+      <div class="languages">
+        <span class="language-tag">🇱🇰 Sinhala</span>
+        <span class="language-tag">🇷🇺 Russian</span>
+        <span class="language-tag">🇺🇸 English</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>
+        <svg class="icon" viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+        About Me
+      </h2>
+      <p>I am a sworn translator based in Sri Lanka, offering professional translation services with expertise in legal, academic, and business documents. With fluency in Sinhala, Russian, and English, I provide accurate and culturally appropriate translations that meet international standards.</p>
+      <p style="margin-top:  1.2rem; font-style: italic; opacity: 0.85;">Based in Weekanda, Morapitiya, Sri Lanka — serving clients worldwide.</p>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JGVcUb4zk0VhdqV9fF7heM4EvmvUiMM&ehbc=2E312F&noprof=1" width="100%" height="100%" style="border:0;" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>
+        <svg class="icon" viewBox="0 0 24 24">
+          <path d="M19 3H5c-1.1 0-2 . 9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+        </svg>
+        Services Offered
+      </h2>
+      <ul class="services-list">
+        <li>📋 Legal Document Translation</li>
+        <li>🎓 Academic Translations</li>
+        <li>📜 Birth & Marriage Certificates</li>
+        <li>💼 Business & Financial Documents</li>
+        <li>✅ Certified Sworn Translations</li>
+        <li>🌐 Multi-language Support</li>
+      </ul>
+    </div>
+
+    <div class="card contact-full">
+      <h2>
+        <svg class="icon" viewBox="0 0 24 24">
+          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+        Get In Touch
+      </h2>
+      <div class="contact-methods">
+        <div class="contact-item">
+          <h3>📧 Email</h3>
+          <a href="mailto:nilansankalpa@gmail.com" class="contact-link">nilansankalpa@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <h3>📱 WhatsApp (Russia)</h3>
+          <a href="https://wa.me/79811322270" target="_blank" class="contact-link">+7 981 132 2270</a>
+        </div>
+        <div class="contact-item">
+          <h3>📱 WhatsApp (Sri Lanka)</h3>
+          <a href="https://wa.me/94711363736" target="_blank" class="contact-link">+94 71 136 3736</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy. html">Privacy Policy</a>
+    </div>
+    <p>&copy; 2025 Nilan Jayasinghe.  All rights reserved.</p>
+  </footer>
+</body>
+</html>
