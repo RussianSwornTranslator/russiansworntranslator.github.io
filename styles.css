@@ -503,3 +503,223 @@
     body.dark-mode .contact-link:hover {
         color: #93c5fd;
     }
+
+/* --- New Hero Banner Styles (Code Wiki Inspired) --- */
+
+.glass-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: inherit;
+    opacity: 0.9;
+}
+
+.nav-logo img {
+    width: 28px;
+    height: 28px;
+}
+
+.hero-section {
+    position: relative;
+    min-height: 85vh; /* Tall banner */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    overflow: hidden;
+    /* Reset original header styles if needed, though class specificity helps */
+    background: transparent;
+    border-bottom: none;
+    margin-bottom: 2rem;
+}
+
+/* The Glow Effect */
+.hero-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.01) 60%, transparent 100%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(60px);
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 10;
+    animation: fadeUp 0.8s ease-out;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #4a5568 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #4b5563;
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
+}
+
+.hero-badges {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.hero-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0,0,0,0.05);
+    backdrop-filter: blur(5px);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Styled Action Bar (replaces Search Bar) */
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 0.5rem;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+.hero-btn {
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.hero-btn.primary {
+    background: #1a1a1a;
+    color: white;
+}
+
+.hero-btn.secondary {
+    background: transparent;
+    color: #1a1a1a;
+}
+
+.hero-btn:hover {
+    transform: translateY(-1px);
+}
+
+.hero-btn.primary:hover {
+    background: #333;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.hero-btn.secondary:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+/* Animations */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .glass-nav { padding: 1rem; }
+    .hero-title { font-size: 3rem; }
+    .hero-section { min-height: 70vh; padding-top: 4rem; }
+    .hero-actions { flex-direction: column; background: transparent; box-shadow: none; border: none; }
+    .hero-btn { width: 100%; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); background: white; }
+    .hero-btn.primary { background: #1a1a1a; }
+}
+
+/* Dark Mode Updates for Hero */
+body.dark-mode .hero-title {
+    background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.dark-mode .hero-subtitle {
+     color: #94a3b8;
+}
+
+body.dark-mode .hero-badge {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: rgba(255,255,255,0.1);
+    color: #cbd5e1;
+}
+
+body.dark-mode .hero-actions {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: rgba(255,255,255,0.1);
+}
+
+body.dark-mode .hero-btn.primary {
+    background: #3b82f6; /* A brighter blue for dark mode actions */
+    color: white;
+}
+
+body.dark-mode .hero-btn.secondary {
+    color: #e2e8f0;
+}
+
+body.dark-mode .hero-btn.primary:hover {
+    background: #2563eb;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+body.dark-mode .hero-btn.secondary:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+body.dark-mode .hero-glow {
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, rgba(59, 130, 246, 0.05) 50%, transparent 80%);
+}
+
