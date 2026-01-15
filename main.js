@@ -1,5 +1,37 @@
 // Add smooth scroll behavior and enhanced interactions
 document.addEventListener("DOMContentLoaded", function () {
+  // Theme Management Function
+  function updateTheme() {
+    const isDarkModePreferred = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const currentHour = new Date().getHours();
+    
+    // Check if it's evening (18:00 - 06:00)
+    const isEvening = currentHour >= 18 || currentHour < 6;
+
+    // Apply dark mode if OS prefers it OR if it's evening (and OS doesn't strictly prefer light)
+    // Note: The logic requested is:
+    // 1. If OS dark -> Dark
+    // 2. If OS not dark -> Time check
+    // However, usually "OS Preference" overrides everything. 
+    // If strict "OS overrides time check" means if OS is Light, it stays Light even at night?
+    // Or if OS is "System Default" (which is usually no-preference) then time check?
+    // Let's implement: If specific dark preference exists, use it. Otherwise use time.
+    
+    if (isDarkModePreferred) {
+      document.body.classList.add('dark-mode');
+    } else if (isEvening) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }
+
+  // Initial call
+  updateTheme();
+
+  // Listen for system changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
+
   // Automatically update copyright year
   const yearElement = document.getElementById("copyright-year");
   if (yearElement) {
